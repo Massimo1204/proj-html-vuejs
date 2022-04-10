@@ -1,0 +1,40 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.my-title {
+    font-family: "Bai Jamjuree", sans-serif;
+    margin-bottom: 3.7rem;
+    font-weight: 700;
+}
+
+.my-title-large {
+    font-size: 7.1rem;
+    line-height: 6rem;
+}
+
+.my-subtitle {
+    font-size: 1.12rem;
+    letter-spacing: 3px;
+}
+
+.my-subtitle-wrapper {
+    margin-bottom: 2.1rem;
+}
+
+.green-line {
+    width: 55px;
+    border: 2px solid $my-green;
+    border-radius: 2px;
+    margin-right: 1.5rem;
+}
+
+.my-button {
+    text-transform: uppercase;
+    padding: 23px 60px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: none;
+}
+
+.my-button-green {
+    background-color: $my-green;
+}

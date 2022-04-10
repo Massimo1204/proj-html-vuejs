@@ -1,28 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <indexJumbo :navbarItems="navbarItems" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import indexJumbo from "./components/Jumbotron.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    indexJumbo,
+  },
+  data: function () {
+    return {
+      navbarItems: [
+        {
+          name: "home",
+          url: "#",
+        },
+        {
+          name: "about",
+          url: "#",
+        },
+        {
+          name: "projects",
+          url: "#",
+        },
+        {
+          name: "services",
+          url: "#",
+        },
+        {
+          name: "blog",
+          url: "#",
+        },
+        {
+          name: "contact",
+          url: "#",
+        },
+      ],
+    };
   },
 };
 </script>
 
 <style lang="scss">
+@import "./style.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 </style>
