@@ -66,7 +66,7 @@ export default {
 section {
   background-color: white;
   color: black;
-  padding: $my-offset 18.23vw 200px 18.23vw;
+  padding: $my-offset $offset-large 200px $offset-large;
   div.title-wrapper {
     margin-bottom: $my-offset;
     h3.my-title {
