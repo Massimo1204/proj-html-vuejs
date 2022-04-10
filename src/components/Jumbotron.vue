@@ -41,7 +41,6 @@ section {
   background-position-y: top;
   background-position-x: right;
   background-repeat: no-repeat;
-  background-color: $bg-dark-blue;
   height: 100vh;
   div.jumbo-text-wrapper {
     height: calc(100vh - 100px);

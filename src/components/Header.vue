@@ -4,7 +4,13 @@
     <nav>
       <ul>
         <li v-for="(element, index) in navbarItems" :key="index">
-          <a :href="element.url"> {{ element.name }} </a>
+          <a
+            :class="element.state ? 'active' : ''"
+            :href="element.url"
+            @click="selectLink(index)"
+          >
+            {{ element.name }}
+          </a>
         </li>
       </ul>
     </nav>
@@ -15,6 +21,17 @@
 export default {
   name: "indexHeader",
   props: ["navbarItems"],
+  methods: {
+    selectLink(i) {
+      this.navbarItems.forEach((element, index) => {
+        if (element.state) {
+          element.state = false;
+        } else if (index == i) {
+          element.state = true;
+        }
+      });
+    },
+  },
 };
 </script>
 
@@ -31,8 +48,14 @@ header {
         a {
           text-decoration: none;
           color: lightgrey;
-          margin-left: 36px;
-          font-size: 0.85rem;
+          margin-left: 33px;
+          font-size: 0.9rem;
+          padding: 31px 0;
+        }
+        a.active {
+          color: white;
+          font-weight: bold;
+          border-top: 3px solid white;
         }
       }
     }
