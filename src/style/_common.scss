@@ -17,8 +17,13 @@
     line-height: 6rem;
 }
 
+.my-title-medium {
+    font-size: 3rem;
+    line-height: 3.6rem;
+}
+
 .my-subtitle {
-    font-size: 1.12rem;
+    font-size: 1.1rem;
     letter-spacing: 3px;
 }
 
@@ -34,7 +39,7 @@
 }
 
 .my-button {
-    padding: 23px 60px;
+    padding: 21px 60px;
     letter-spacing: 2px;
     font-weight: 500;
     border: none;
@@ -42,4 +47,9 @@
 
 .my-button-green {
     background-color: $my-green;
+}
+
+.my-button-red {
+    background-color: $my-red;
+    color: white;
 }

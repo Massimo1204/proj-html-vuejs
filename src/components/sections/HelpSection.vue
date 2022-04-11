@@ -7,46 +7,24 @@
     <div
       class="help-content-wrapper d-flex flex-column justify-content-between"
     >
-      <div class="d-flex justify-content-between w-100">
-        <div class="help-text-wrapper d-flex align-items-start">
-          <img src="../../assets/graph.png" alt="graph icon" />
+      <div
+        class="d-flex justify-content-between w-100"
+        v-for="(items, index) in helpSectionItems"
+        :key="index"
+      >
+        <div
+          class="help-text-wrapper d-flex align-items-start"
+          v-for="(element, index) in items"
+          :key="index + 'inside'"
+        >
+          <img
+            :src="require(`../../assets/${element.imgSrc}`)"
+            :salt="element.name"
+          />
           <div class="d-inline-block">
-            <h4 class="my-title">statistical consulting</h4>
+            <h4 class="my-title">{{ element.title }}</h4>
             <p>
-              When, while lovely valley teems with vapour around meand eridian
-              sun strikes the upper impenetrable foliage of my trees, and but a
-            </p>
-          </div>
-        </div>
-        <div class="help-text-wrapper d-flex align-items-start">
-          <img src="../../assets/megaphone.png" alt="megaphone icon" />
-          <div class="d-inline-block">
-            <h4 class="my-title">digital consulting</h4>
-            <p>
-              When, while lovely valley teems with vapour around meand eridian
-              sun strikes the upper impenetrable foliage of my trees, and but a
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-between w-100">
-        <div class="help-text-wrapper d-flex align-items-start">
-          <img src="../../assets/wallet.png" alt="wallet icon" />
-          <div class="d-inline-block">
-            <h4 class="my-title">banking consulting</h4>
-            <p>
-              When, while lovely valley teems with vapour around meand eridian
-              sun strikes the upper impenetrable foliage of my trees, and but a
-            </p>
-          </div>
-        </div>
-        <div class="help-text-wrapper d-flex align-items-start">
-          <img src="../../assets/bullseye.png" alt="bullseye icon" />
-          <div class="d-inline-block">
-            <h4 class="my-title">enterprise consulting</h4>
-            <p>
-              When, while lovely valley teems with vapour around meand eridian
-              sun strikes the upper impenetrable foliage of my trees, and but a
+              {{ element.description }}
             </p>
           </div>
         </div>
@@ -58,12 +36,51 @@
 <script>
 export default {
   name: "helpSection",
+  data: function () {
+    return {
+      helpSectionItems: [
+        [
+          {
+            title: "statistical consulting",
+            name: "graph icon",
+            imgSrc: "graph.png",
+            description:
+              "When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a",
+          },
+          {
+            title: "digital consulting",
+            name: "megaphone icon",
+            imgSrc: "megaphone.png",
+            description:
+              "When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a",
+          },
+        ],
+        [
+          {
+            title: "banking consulting",
+            name: "wallet icon",
+            imgSrc: "wallet.png",
+            description:
+              "When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a",
+          },
+          {
+            title: "enterprise consulting",
+            name: "graph icon",
+            imgSrc: "bullseye.png",
+            description:
+              "When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a",
+          },
+        ],
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../style.scss";
 section {
+  overflow-x: hidden;
   background-color: white;
   color: black;
   padding: $my-offset $offset-large 200px $offset-large;
@@ -88,6 +105,9 @@ section {
         margin-top: 10px;
         h4 {
           margin-bottom: 1rem;
+        }
+        p {
+          color: rgb(78, 78, 80);
         }
       }
     }
