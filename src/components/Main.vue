@@ -4,6 +4,7 @@
     <aboutUsSection />
     <projectSection />
     <testimonialSection />
+    <recentSection />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import helpSection from "./sections/HelpSection.vue";
 import aboutUsSection from "./sections/AboutUs.vue";
 import projectSection from "./sections/Project.vue";
 import testimonialSection from "./sections/Testimonial.vue";
+import recentSection from "./sections/Recent.vue";
 
 export default {
   name: "indexMain",
@@ -20,6 +22,7 @@ export default {
     aboutUsSection,
     projectSection,
     testimonialSection,
+    recentSection,
   },
 };
 </script>
