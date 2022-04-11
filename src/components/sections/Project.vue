@@ -57,7 +57,7 @@ export default {
 
 section {
   height: 976px;
-  padding: 200px 8vw 0 8vw;
+  padding: 200px $my-offset 0 $my-offset;
   div.my-subtitle-wrapper {
     margin-bottom: 1.5rem;
   }
