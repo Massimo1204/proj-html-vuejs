@@ -58,6 +58,7 @@ section {
   div.testimonial-title-wrapper {
     padding-right: 8.7vw;
     div.my-subtitle-wrapper {
+      margin-bottom: 0.5rem;
       div.green-line {
         right: 0;
         margin-right: 0;

@@ -2,18 +2,21 @@
   <div id="app">
     <indexJumbo :navbarItems="navbarItems" />
     <indexMain />
+    <indexFooter :navbarItems="navbarItems" />
   </div>
 </template>
 
 <script>
 import indexJumbo from "./components/Jumbotron.vue";
 import indexMain from "./components/Main.vue";
+import indexFooter from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     indexJumbo,
     indexMain,
+    indexFooter,
   },
   data: function () {
     return {

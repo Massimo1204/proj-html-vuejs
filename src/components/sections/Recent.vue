@@ -5,7 +5,7 @@
         <div class="green-line d-inline-block"></div>
         <span class="my-subtitle">blog</span>
       </div>
-      <div class="clearfix w-100">
+      <div class="recent-title clearfix w-100">
         <h2 class="my-title my-title-medium d-inline-block">
           the recent news you must read it
         </h2>
@@ -68,6 +68,11 @@ export default {
 @import "../../style.scss";
 section {
   padding: 0 $my-offset 310px $my-offset;
+  div.recent-title-wrapper {
+    div.recent-title {
+      margin-bottom: 1.6rem;
+    }
+  }
   div.news-wrapper {
     div.new {
       width: 49%;
