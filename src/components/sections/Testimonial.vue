@@ -65,7 +65,7 @@ section {
       }
     }
     h2.my-title {
-      width: 50%;
+      width: 40%;
     }
   }
   div.reviews {
