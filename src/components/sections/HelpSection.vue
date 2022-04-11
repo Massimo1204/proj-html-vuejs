@@ -19,7 +19,7 @@
         >
           <img
             :src="require(`../../assets/${element.imgSrc}`)"
-            :salt="element.name"
+            :alt="element.name"
           />
           <div class="d-inline-block">
             <h4 class="my-title">{{ element.title }}</h4>

@@ -17,8 +17,13 @@
         </div>
       </div>
     </div>
-    <div class="project-images-wrapper">
-      <img src="" alt="" />
+    <div class="project-images-wrapper d-flex justify-content-between w-100">
+      <img
+        v-for="(element, index) in projectImages"
+        :key="index"
+        :src="require(`../../assets/${element.imgSrc}`)"
+        :alt="element.name"
+      />
     </div>
   </section>
 </template>
@@ -27,7 +32,22 @@
 export default {
   name: "projectSection",
   data: function () {
-    return {};
+    return {
+      projectImages: [
+        {
+          name: "dry image",
+          imgSrc: "dry.jpg",
+        },
+        {
+          name: "sponsorship image",
+          imgSrc: "sponsorship-proposal.jpg",
+        },
+        {
+          name: "vizeion image",
+          imgSrc: "consulting-vizeon.jpg",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -48,10 +68,17 @@ section {
     div.project-arrows-wrapper {
       padding-top: 20px;
       div.project-arrow-wrapper {
-        padding: 17px 20px 13px 20px;
+        padding: 17px 19px 12px 19px;
         background-color: rgba($color: #ffffff, $alpha: 0.1);
         display: inline-block;
+        filter: brightness(0.8);
       }
+    }
+  }
+  div.project-images-wrapper {
+    img {
+      width: 32%;
+      height: 380px;
     }
   }
 }
